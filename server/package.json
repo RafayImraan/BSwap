@@ -1,0 +1,26 @@
+{
+  "name": "@bswap/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "demo:wallets": "node scripts/generate-demo-wallets.js",
+    "verify:env": "node scripts/verify-env.js",
+    "deploy:hedera-sdk": "node scripts/deploy-hedera-contract.js"
+  },
+  "dependencies": {
+    "@hashgraph/sdk": "^2.51.0",
+    "bitcoinjs-lib": "^6.1.5",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "ecpair": "^2.1.0",
+    "ethers": "^6.13.2",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "socket.io": "^4.7.5",
+    "tiny-secp256k1": "^2.2.3",
+    "zod": "^3.23.8"
+  }
+}

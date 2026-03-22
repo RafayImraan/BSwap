@@ -1,0 +1,20 @@
+{
+  "name": "bswap",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "server",
+    "client",
+    "contracts"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w server",
+    "dev:client": "npm run dev -w client",
+    "dev:server": "npm run dev -w server",
+    "build": "npm run build -w client",
+    "lint": "npm run lint -w client",
+    "deploy:hedera": "npm run deploy -w contracts",
+    "demo:wallets": "npm run demo:wallets -w server",
+    "verify:env": "npm run verify:env -w server"
+  }
+}

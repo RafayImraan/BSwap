@@ -1,0 +1,269 @@
+{
+  "swaps": [
+    {
+      "id": "abadb389-6bdd-4976-9850-ccf39147f87b",
+      "createdAt": "2026-03-22T09:47:49.045Z",
+      "updatedAt": "2026-03-22T19:52:16.483Z",
+      "history": [
+        {
+          "at": "2026-03-22T09:47:49.077Z",
+          "type": "swap-created",
+          "message": "Swap created and secret hash generated."
+        },
+        {
+          "at": "2026-03-22T09:47:58.285Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:47:58.516Z",
+          "type": "bitcoin-refunded",
+          "message": "BITCOIN refunded via btc-refund-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:00.161Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:00.180Z",
+          "type": "hbar-locked",
+          "message": "HBAR locked on Hedera via hedera-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:00.217Z",
+          "type": "secret-revealed",
+          "message": "Secret revealed on hedera."
+        },
+        {
+          "at": "2026-03-22T09:48:00.229Z",
+          "type": "btc-claimed",
+          "message": "BTC claimed with secret via btc-claim-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:01.410Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:01.415Z",
+          "type": "hbar-locked",
+          "message": "HBAR locked on Hedera via hedera-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:01.424Z",
+          "type": "secret-revealed",
+          "message": "Secret revealed on hedera."
+        },
+        {
+          "at": "2026-03-22T09:48:01.429Z",
+          "type": "btc-claimed",
+          "message": "BTC claimed with secret via btc-claim-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:01.732Z",
+          "type": "btc-claimed",
+          "message": "BTC claimed with secret via relayed-btc-claim-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:02.326Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:02.330Z",
+          "type": "hbar-locked",
+          "message": "HBAR locked on Hedera via hedera-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:02.338Z",
+          "type": "secret-revealed",
+          "message": "Secret revealed on hedera."
+        },
+        {
+          "at": "2026-03-22T09:48:02.357Z",
+          "type": "btc-claimed",
+          "message": "BTC claimed with secret via btc-claim-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:03.288Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:03.295Z",
+          "type": "bitcoin-refunded",
+          "message": "BITCOIN refunded via btc-refund-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:05.095Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:05.108Z",
+          "type": "hbar-locked",
+          "message": "HBAR locked on Hedera via hedera-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T09:48:05.121Z",
+          "type": "secret-revealed",
+          "message": "Secret revealed on hedera."
+        },
+        {
+          "at": "2026-03-22T09:48:05.128Z",
+          "type": "btc-claimed",
+          "message": "BTC claimed with secret via btc-claim-abadb389."
+        },
+        {
+          "at": "2026-03-22T19:52:14.577Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T19:52:14.623Z",
+          "type": "bitcoin-refunded",
+          "message": "BITCOIN refunded via btc-refund-abadb389."
+        },
+        {
+          "at": "2026-03-22T19:52:16.404Z",
+          "type": "btc-locked",
+          "message": "BTC locked in HTLC via btc-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T19:52:16.439Z",
+          "type": "hbar-locked",
+          "message": "HBAR locked on Hedera via hedera-lock-abadb389."
+        },
+        {
+          "at": "2026-03-22T19:52:16.470Z",
+          "type": "secret-revealed",
+          "message": "Secret revealed on hedera."
+        },
+        {
+          "at": "2026-03-22T19:52:16.483Z",
+          "type": "btc-claimed",
+          "message": "BTC claimed with secret via btc-claim-abadb389."
+        }
+      ],
+      "status": "completed",
+      "mode": "testnet",
+      "secret": "03982a26ab762a1e52457dd7d7f36e16a991cb509ad3a6cb673eaad0ed0d26da",
+      "secretHash": "f50d7db08e041ecb051b445d1674c3dfa006cdc4b68742b6e507fcc45ef646bb",
+      "amounts": {
+        "btc": 0.01,
+        "hbar": 120
+      },
+      "expiries": {
+        "bitcoinLocktime": 1774259268,
+        "hederaTimelock": 1774216068
+      },
+      "participants": {
+        "alice": {
+          "btcAddress": "tb1qaliceexample...",
+          "btcPubKey": "02a1633caf7bf6b6e3d8f6a1dbd3f3147f8ce1b5d7f4cabb7a6d2014cb6db4f430",
+          "hbarAccount": "0.0.5001",
+          "evmAddress": "0x1111111111111111111111111111111111111111"
+        },
+        "bob": {
+          "btcAddress": "tb1qbobexample...",
+          "btcPubKey": "03b0bd634234abbb1ba1e986e884185c9b4ac5c2b2bd4498d7ccf54f9f7f0f8bb9",
+          "hbarAccount": "0.0.5002",
+          "evmAddress": "0x2222222222222222222222222222222222222222"
+        },
+        "amounts": {
+          "btc": 0.01,
+          "hbar": 120
+        },
+        "expiries": {
+          "bitcoinSeconds": 86400,
+          "hederaSeconds": 43200
+        }
+      },
+      "bitcoin": {
+        "scriptHex": "63a820f50d7db08e041ecb051b445d1674c3dfa006cdc4b68742b6e507fcc45ef646bb882103b0bd634234abbb1ba1e986e884185c9b4ac5c2b2bd4498d7ccf54f9f7f0f8bb9ac6704440cc169b1752102a1633caf7bf6b6e3d8f6a1dbd3f3147f8ce1b5d7f4cabb7a6d2014cb6db4f430ac68",
+        "witnessScriptHex": "63a820f50d7db08e041ecb051b445d1674c3dfa006cdc4b68742b6e507fcc45ef646bb882103b0bd634234abbb1ba1e986e884185c9b4ac5c2b2bd4498d7ccf54f9f7f0f8bb9ac6704440cc169b1752102a1633caf7bf6b6e3d8f6a1dbd3f3147f8ce1b5d7f4cabb7a6d2014cb6db4f430ac68",
+        "address": "tb1qeglq0wgwssp68ffdx2fe59gul4lfmdu97zrdv6td3yfq6pmf6s8s0vrtwt",
+        "network": "testnet",
+        "lockTxId": "btc-lock-abadb389",
+        "claimTxId": "btc-claim-abadb389",
+        "refundTxId": "btc-refund-abadb389",
+        "confirmations": 1
+      },
+      "hedera": {
+        "contractId": null,
+        "swapId": "62fc221e09ab4cdc7b39888fba07b1c84db7a1963643c797e6b2a06c9b5fe783",
+        "lockTxId": "hedera-lock-abadb389",
+        "claimTxId": "hedera-claim-abadb389",
+        "refundTxId": null,
+        "confirmations": 1
+      }
+    },
+    {
+      "id": "9c3a404c-f20a-48b2-a3b7-dfecdf2248fa",
+      "createdAt": "2026-03-22T19:52:24.452Z",
+      "updatedAt": "2026-03-22T19:52:24.457Z",
+      "history": [
+        {
+          "at": "2026-03-22T19:52:24.456Z",
+          "type": "swap-created",
+          "message": "Swap created and secret hash generated."
+        }
+      ],
+      "status": "awaiting-btc-lock",
+      "mode": "testnet",
+      "secret": "f1aee6334fd18fcc3fb5091f23fa90dc7323bcf70c11a0753fdf230ff0216d3f",
+      "secretHash": "1758a4a26a7813ebad7f6e79087f405dc55af7d299007cfc1d0803859ce564ea",
+      "amounts": {
+        "btc": 0.01,
+        "hbar": 120
+      },
+      "amountSats": 1000000,
+      "expiries": {
+        "bitcoinLocktime": 1774295544,
+        "hederaTimelock": 1774252344
+      },
+      "participants": {
+        "alice": {
+          "btcAddress": "tb1qaliceexample...",
+          "btcPubKey": "02a1633caf7bf6b6e3d8f6a1dbd3f3147f8ce1b5d7f4cabb7a6d2014cb6db4f430",
+          "hbarAccount": "0.0.5001",
+          "evmAddress": "0x1111111111111111111111111111111111111111"
+        },
+        "bob": {
+          "btcAddress": "tb1qbobexample...",
+          "btcPubKey": "03b0bd634234abbb1ba1e986e884185c9b4ac5c2b2bd4498d7ccf54f9f7f0f8bb9",
+          "hbarAccount": "0.0.5002",
+          "evmAddress": "0x2222222222222222222222222222222222222222"
+        },
+        "amounts": {
+          "btc": 0.01,
+          "hbar": 120
+        },
+        "expiries": {
+          "bitcoinSeconds": 86400,
+          "hederaSeconds": 43200
+        }
+      },
+      "bitcoin": {
+        "scriptHex": "63a8201758a4a26a7813ebad7f6e79087f405dc55af7d299007cfc1d0803859ce564ea882103b0bd634234abbb1ba1e986e884185c9b4ac5c2b2bd4498d7ccf54f9f7f0f8bb9ac6704f899c169b1752102a1633caf7bf6b6e3d8f6a1dbd3f3147f8ce1b5d7f4cabb7a6d2014cb6db4f430ac68",
+        "witnessScriptHex": "63a8201758a4a26a7813ebad7f6e79087f405dc55af7d299007cfc1d0803859ce564ea882103b0bd634234abbb1ba1e986e884185c9b4ac5c2b2bd4498d7ccf54f9f7f0f8bb9ac6704f899c169b1752102a1633caf7bf6b6e3d8f6a1dbd3f3147f8ce1b5d7f4cabb7a6d2014cb6db4f430ac68",
+        "outputScriptHex": "0020260aba61e9b6ce6344b39b7fd27056209b7ff07e576a9e6ea8604fda2accd0bb",
+        "address": "tb1qyc9t5c0fkm8xx39nndlayuzkyzdhlur72a4fum4gvp8a52kv6zasp2plz9",
+        "network": "testnet",
+        "lockTxId": null,
+        "claimTxId": null,
+        "refundTxId": null,
+        "confirmations": 0
+      },
+      "hedera": {
+        "contractId": null,
+        "swapId": null,
+        "lockTxId": null,
+        "claimTxId": null,
+        "refundTxId": null,
+        "confirmations": 0
+      }
+    }
+  ]
+}
