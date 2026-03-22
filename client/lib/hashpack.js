@@ -1,27 +1,6 @@
-let cachedConnector = null;
-
 const MIRROR_NODE_BASE = "https://testnet.mirrornode.hedera.com/api/v1";
 
-async function getConnector() {
-  if (cachedConnector) {
-    return cachedConnector;
-  }
-
-  const [{ HashConnect }, { LedgerId }] = await Promise.all([
-    import("hashconnect"),
-    import("@hashgraph/sdk")
-  ]);
-
-  const connector = new HashConnect(
-    LedgerId.TESTNET,
-    process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "",
-    "BSwap",
-    "BSwap atomic settlement console"
-  );
-
-  cachedConnector = connector;
-  return connector;
-}
+let cachedConnector = null;
 
 async function lookupEvmAddress(accountId) {
   try {
@@ -40,6 +19,37 @@ async function lookupEvmAddress(accountId) {
   }
 }
 
+async function getConnector() {
+  if (cachedConnector) {
+    return cachedConnector;
+  }
+
+  const [{ HashConnect }, { LedgerId }] = await Promise.all([
+    import("hashconnect"),
+    import("@hashgraph/sdk")
+  ]);
+
+  const metadata = {
+    name: "BSwap",
+    description: "BSwap atomic settlement console",
+    icons: ["https://www.google.com/s2/favicons?domain=localhost&sz=128"],
+    url:
+      typeof window !== "undefined" && window.location?.origin
+        ? window.location.origin
+        : "http://localhost:3000"
+  };
+
+  const connector = new HashConnect(
+    LedgerId.TESTNET,
+    process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "",
+    metadata,
+    false
+  );
+
+  cachedConnector = connector;
+  return connector;
+}
+
 export async function connectHashPack() {
   const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || "";
   if (!projectId) {
@@ -51,53 +61,57 @@ export async function connectHashPack() {
   }
 
   const connector = await getConnector();
+  await connector.init();
 
-  const existing = connector.getConnections?.();
-  if (existing && existing.length > 0) {
-    const first = existing[0];
-    const accountId = first.accountIds?.[0] || "";
+  const existingAccounts = connector.connectedAccountIds || [];
+  if (existingAccounts.length > 0) {
+    const accountId = existingAccounts[0].toString();
     return {
       accountId,
       evmAddress: (await lookupEvmAddress(accountId)) || ""
     };
   }
 
-  return new Promise(async (resolve, reject) => {
+  return new Promise((resolve, reject) => {
     let settled = false;
+    let timeoutId = null;
 
-    const finish = (value) => {
+    const cleanup = () => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
+
+    const finish = async (data) => {
       if (settled) {
         return;
       }
+
       settled = true;
-      resolve(value);
+      cleanup();
+
+      const accountId = data.accountIds?.[0] || "";
+      resolve({
+        accountId,
+        evmAddress: (await lookupEvmAddress(accountId)) || ""
+      });
     };
 
     const fail = (error) => {
       if (settled) {
         return;
       }
+
       settled = true;
+      cleanup();
       reject(error);
     };
 
-    const pairingHandler = async (data) => {
-      const accountId = data.accountIds?.[0] || "";
-      finish({
-        accountId,
-        evmAddress: (await lookupEvmAddress(accountId)) || ""
-      });
-    };
+    connector.pairingEvent.once(finish);
+    connector.openPairingModal("dark", "#090b10", "#d7ba72", "#d7ba72", "24px").catch(fail);
 
-    try {
-      connector.pairingEvent.once(pairingHandler);
-      await connector.init();
-      await connector.openPairingModal();
-      setTimeout(() => {
-        fail(new Error("HashPack pairing timed out. Approve the connection request in HashPack."));
-      }, 90000);
-    } catch (error) {
-      fail(error);
-    }
+    timeoutId = setTimeout(() => {
+      fail(new Error("HashPack pairing timed out. Approve the connection request in HashPack."));
+    }, 90000);
   });
 }
